@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.MoveMedical" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">#03A9F4</item>
+        <item name="colorPrimaryVariant">#0288D1</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#00BCD4</item>
+        <item name="colorSecondaryVariant">#0097A7</item>
+        <item name="colorOnSecondary">#000000</item>
+        <item name="textInputStyle">@style/TextInputLayoutTheme</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
+    <style name="Base.Theme.MoveMedical" parent="Theme.Material3.DayNight.NoActionBar">
+
+    </style>
+
+    <style name="AutoCompleteTextViewNoBorder" parent="@style/Widget.AppCompat.AutoCompleteTextView">
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="TextInputLayoutTheme" parent="Widget.Design.TextInputLayout">
+        <item name="colorOnSurface">@android:color/transparent</item>
+    </style>
+
+</resources>

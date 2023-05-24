@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/margin_16_dp">
+
+            <ImageView
+                android:id="@+id/img_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/txt_appointment_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/please_add_appointment_name"
+                app:layout_constraintBottom_toBottomOf="@id/img_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_name"
+                app:layout_constraintTop_toTopOf="@+id/img_name" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/img_location"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/please_select_location"
+                app:boxBackgroundColor="?attr/colorOnPrimary"
+                app:boxStrokeWidth="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_name"
+                app:startIconDrawable="@drawable/img_map">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView"
+                    style="@style/AutoCompleteTextViewNoBorder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/img_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_calendar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_location" />
+
+            <Button
+                android:id="@+id/btn_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/please_add_date"
+                app:layout_constraintBottom_toBottomOf="@+id/img_date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_date"
+                app:layout_constraintTop_toTopOf="@+id/img_date" />
+
+            <ImageView
+                android:id="@+id/img_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_time"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_date" />
+
+            <Button
+                android:id="@+id/btn_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_4_dp"
+                android:text="@string/please_add_time"
+                app:layout_constraintBottom_toBottomOf="@+id/img_time"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_time"
+                app:layout_constraintTop_toTopOf="@+id/img_time" />
+
+            <EditText
+                android:id="@+id/txt_appointment_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16_dp"
+                android:hint="@string/please_add_appointment_description"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_time" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

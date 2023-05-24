@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.details.AppointmentDetailsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/img_height"
+            android:background="?colorOnPrimary"
+            android:scaleType="centerInside"
+            android:src="@drawable/img_coordinator_appointment"
+            app:layout_collapseMode="parallax" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include
+        android:id="@+id/layout_footer"
+        layout="@layout/content_appointment" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        app:tint="?colorOnPrimary"
+        android:layout_marginEnd="@dimen/margin_16_dp"
+        android:layout_marginBottom="@dimen/margin_16_dp"
+        android:src="@drawable/img_add" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
