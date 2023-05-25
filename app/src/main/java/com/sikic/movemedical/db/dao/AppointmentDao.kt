@@ -13,7 +13,7 @@ import com.sikic.movemedical.db.entity.Appointment
 interface AppointmentDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert(appointment: Appointment) : Long
+    suspend fun insert(appointment: Appointment)
 
     @Delete
     suspend fun delete(appointment: Appointment)
