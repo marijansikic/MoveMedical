@@ -17,6 +17,7 @@ The code is structured in packages by feature.
 All images and either vectors or webp for additional lossless quality compression
 
 ## Extra features ##
+* Unit tests added and fully covered
 * Dark Mode -> App works in dark mode when changed from settings
 * Pressing on location shows Google Maps
 
